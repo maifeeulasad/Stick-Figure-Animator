@@ -18,9 +18,8 @@ public class StickFrame extends JFrame {
 
         for (PointColored t:
                 points) {
-            CustomFrame mc = new CustomFrame(t);
+            CustomFrame mc = new CustomFrame(t,this);
             add(mc);
-            System.out.println("g");
 
         }
 
@@ -41,23 +40,23 @@ public class StickFrame extends JFrame {
     }
 
 
-    /*
     public void paint (Graphics g){
         super.paint(g);
 
 
 
-        g.drawLine(points[2].x,points[2].y,points[4].x,points[4].y);
-        g.drawLine(points[2].x,points[2].y,points[1].x,points[1].y);
-        g.drawLine(points[3].x,points[3].y,points[5].x,points[5].y);
-        g.drawLine(points[3].x,points[3].y,points[1].x,points[1].y);
-        g.drawLine(points[6].x,points[6].y,points[1].x,points[1].y);
-        g.drawLine(points[6].x,points[6].y,points[7].x,points[7].y);
-        g.drawLine(points[6].x,points[6].y,points[8].x,points[8].y);
-        g.drawLine(points[9].x,points[9].y,points[7].x,points[7].y);
-        g.drawLine(points[10].x,points[10].y,points[8].x,points[8].y);
+        g.drawLine(points[2].x+10,points[2].y+22+10,points[4].x+10,points[4].y+22+10);
+        g.drawLine(points[2].x+10,points[2].y+22+10,points[1].x+10,points[1].y+22+10);
+        g.drawLine(points[3].x+10,points[3].y+22+10,points[5].x+10,points[5].y+22+10);
+        g.drawLine(points[3].x+10,points[3].y+22+10,points[1].x+10,points[1].y+22+10);
+        g.drawLine(points[6].x+10,points[6].y+22+10,points[1].x+10,points[1].y+22+10);
+        g.drawLine(points[6].x+10,points[6].y+22+10,points[7].x+10,points[7].y+22+10);
+        g.drawLine(points[6].x+10,points[6].y+22+10,points[8].x+10,points[8].y+22+10);
+        g.drawLine(points[9].x+10,points[9].y+22+10,points[7].x+10,points[7].y+22+10);
+        g.drawLine(points[10].x+10,points[10].y+22+10,points[8].x+10,points[8].y+22+10);
+        //g.drawOval(points[0].x+10,points[0].y+22+10,Util.distance(points[0],points[1]),Util.distance(points[0],points[1]));
+
     }
-    */
 
 
 

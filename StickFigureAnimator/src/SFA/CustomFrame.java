@@ -9,6 +9,8 @@ public class CustomFrame extends JComponent implements MouseListener,MouseMotion
 
     PointColored pointColored;
 
+    StickFrame frame;
+
     private Color colors[]={Color.red,Color.green,Color.blue,Color.yellow,Color.orange};
 
     private volatile int screenX = 0;
@@ -52,6 +54,13 @@ public class CustomFrame extends JComponent implements MouseListener,MouseMotion
 
     }
 
+    public CustomFrame(PointColored t, StickFrame stickFrame) {
+
+        this(t.color,t.x,t.y,10);
+        this.frame=stickFrame;
+        this.pointColored=t;
+    }
+
 
     @Override
     public void mouseClicked(MouseEvent e) { }
@@ -87,6 +96,8 @@ public class CustomFrame extends JComponent implements MouseListener,MouseMotion
         setLocation(myX + deltaX, myY + deltaY);
 
         pointColored.posChange(getLocation());
+
+        frame.repaint();
 
 
     }
