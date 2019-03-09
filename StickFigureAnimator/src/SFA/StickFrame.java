@@ -20,6 +20,7 @@ public class StickFrame extends JFrame {
                 points) {
             CustomFrame mc = new CustomFrame(t,this);
             add(mc);
+            System.out.println(SwingUtilities.convertPoint(mc, t.x, t.y, this));
 
         }
 

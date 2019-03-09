@@ -31,6 +31,7 @@ public class PointColored implements ChangeListener {
         this.y=x.y;
     }
 
+
     @Override
     public void stateChanged(ChangeEvent e) {
         System.out.println("point change");
